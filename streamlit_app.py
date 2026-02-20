@@ -30,12 +30,33 @@ if "selected_model" not in st.session_state:
     st.session_state.selected_model = None
 
 # Define model details
+
 models = {
-    "gemma-7b-it": {"name": "Gemma-7b-it", "tokens": 8192, "developer": "Google"},
-    "llama-3.1-70b-Versatile": {"name": "llama-3.1-70b-Versatile", "tokens": 4096, "developer": "Meta"},
-    "llama3-70b-8192": {"name": "LLaMA3-70b-8192", "tokens": 8192, "developer": "Meta"},
-    "llama3-8b-8192": {"name": "LLaMA3-8b-8192", "tokens": 8192, "developer": "Meta"},
-    "mixtral-8x7b-32768": {"name": "Mixtral-8x7b-Instruct-v0.1", "tokens": 32768, "developer": "Mistral"},
+    "llama-3.3-70b-versatile": {
+        "name": "Llama-3.3-70B-Versatile", 
+        "tokens": 131072, 
+        "developer": "Meta"
+    },
+    "meta-llama/llama-4-maverick-17b-128e-instruct": {
+        "name": "Llama-4-Maverick-17B-128E", 
+        "tokens": 131072, 
+        "developer": "Meta"
+    },
+    "moonshotai/kimi-k2-instruct-0905": {
+        "name": "Kimi-K2-0905", 
+        "tokens": 262144, 
+        "developer": "Moonshot AI"
+    },
+    "qwen/qwen3-32b": {
+        "name": "Qwen3-32B", 
+        "tokens": 131072, 
+        "developer": "Alibaba"
+    },
+    "openai/gpt-oss-120b": {
+        "name": "GPT-OSS-120B", 
+        "tokens": 131072, 
+        "developer": "OpenAI"
+    },
 }
 
 # Layout for model selection and max_tokens slider
